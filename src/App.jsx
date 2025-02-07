@@ -5,9 +5,9 @@ import Navbar from './assets/components/Navbar'
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Home />
-    <Footer />
+      <Navbar />
+      <Home />
+      <Footer />
     </>
   )
 }
