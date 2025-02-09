@@ -2,7 +2,7 @@ import { formatNumber } from '../utils/format'
 
 const Navbar = () => {
   const total = 19850
-  const token = true
+  const token = false
   return (
     <nav className='bg-dark text-light p-3 d-flex'>
       <div className='container-fluid'>
