@@ -1,26 +1,30 @@
 import PropTypes from 'prop-types'
-
-const CardPizza = ({ name, price, ingredients, img }) => {
+const CardPizza = ({ img, ingredients, name, price }) => {
   return (
-    <>
-      <img className='image rounded-top' src={img} alt={name} />
-      <h3 className='text-start mt-2 mx-2'>Pizza {name}</h3>
-      <h3 className='fs-4 fw-normal'>Ingredientes</h3>
-      <p>🍕 {ingredients.join(', ')}</p>
-      <h2 className='mb-4'>Precio: {price}</h2>
-      <div className='mb-3'>
-        <button className='btn btn-outline-dark mx-2'>Ver más 👀</button>
-        <button className='btn btn-dark mx-2'>Añadir 🛒</button>
+    <main className='col-md-4'>
+      <div className='card shadow-sm mb-3'>
+        <img src={img} alt={name} />
+        <div className='card-body'>
+          <h3 className='card-title'>{name.toUpperCase()}</h3>
+          <p className='card-text'>Precio: {price}</p>
+          <ul className='list-unstyled'>
+            {ingredients.map((ingredient) => (
+              <li className='card-text' key={ingredient}>{ingredient}</li>
+            ))}
+          </ul>
+        </div>
+        <div className='card-footer d-grid'>
+          <button className='btn btn-dark'>Comprar</button>
+        </div>
       </div>
-    </>
+    </main>
   )
 }
 
 CardPizza.propTypes = {
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
   ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-  img: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired
 }
-
 export default CardPizza
