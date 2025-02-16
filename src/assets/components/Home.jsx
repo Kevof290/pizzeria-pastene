@@ -1,47 +1,26 @@
-import Header from './Header'
 import CardPizza from './CardPizza'
 import { formatNumber } from '../utils/format'
 import '../components/Home.css'
+import { pizzas } from '../utils/pizzas'
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <main className='container'>
-        <div className='row text-center my-3 g-1'>
-          <div className='col border rounded mx-2'>
-            <CardPizza
-              name='Napolitana'
-              price={formatNumber(5950)}
-              ingredients={['mozzarella', 'tomates', 'jamón', 'orégano']}
-              img='https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.co
-m/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9
-080-784dcc87ec2c'
-            />
-          </div>
-          <div className='col border rounded mx-2'>
-            <CardPizza
-              name='Española'
-              price={formatNumber(6950)}
-              ingredients={['mozzarella', 'gorgonzola', 'parmesano', 'provolone']}
-              img='https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.co
-m/o/pizzeria%2Fcheese-164872_640_com.jpg?alt=media&token=18b2b821-4d0d-43f2-
-a1c6-8c57bc388fab'
-            />
-          </div>
-          <div className='col border rounded mx-2'>
-            <CardPizza
-              name='Pepperoni'
-              price={formatNumber(6950)}
-              ingredients={['mozzarella', 'pepperoni', 'orégano']}
-              img='https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.co
-m/o/pizzeria%2Fpizza-1239077_640_com.jpg?alt=media&token=e7cde87a-08d5-4040-
-ac54-90f6c31eb3e3'
-            />
-          </div>
-        </div>
-      </main>
-    </>
+    <main className='container my-3'>
+      <div className='row row-cols-1 row-cols-md-6 g-2'>
+        {pizzas.map((pizza) => (
+          <CardPizza
+            key={pizza.id}
+            desc={pizza.desc}
+            id={pizza.id}
+            img={pizza.img}
+            ingredients={pizza.ingredients}
+            name={pizza.name}
+            price={formatNumber(pizza.price)}
+            className='card h-100 shadow-sm mb-3'
+          />
+        ))}
+      </div>
+    </main>
   )
 }
 
