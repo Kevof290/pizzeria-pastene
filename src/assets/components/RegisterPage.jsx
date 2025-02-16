@@ -39,7 +39,6 @@ const RegisterPage = () => {
             <div className='card-body'>
               <Toaster position='bottom-right' richColors expand />
               <form onSubmit={handleSubmit}>
-                {/* Campo: Correo electrónico */}
                 <div className='mb-3'>
                   <label htmlFor='email' className='form-label'>
                     Correo electrónico
@@ -53,7 +52,6 @@ const RegisterPage = () => {
                     placeholder='tucorreo@ejemplo.cl'
                   />
                 </div>
-                {/* Campo: Contraseña */}
                 <div className='mb-3'>
                   <label htmlFor='password' className='form-label'>
                     Contraseña
@@ -67,7 +65,6 @@ const RegisterPage = () => {
                     placeholder='Crea una contraseña'
                   />
                 </div>
-                {/* Campo: Confirmar contraseña */}
                 <div className='mb-3'>
                   <label htmlFor='confirmarPassword' className='form-label'>
                     Confirmar contraseña
@@ -81,8 +78,6 @@ const RegisterPage = () => {
                     placeholder='Confirma tu contraseña'
                   />
                 </div>
-
-                {/* Botón de Registro */}
                 <div className='d-grid'>
                   <button type='submit' className='btn btn-success w-50 mx-auto'>
                     Registrarse

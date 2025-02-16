@@ -34,7 +34,6 @@ const LoginPage = () => {
             <div className='card-body'>
               <Toaster position='bottom-right' richColors expand />
               <form onSubmit={handleSubmit}>
-                {/* Campo: Correo electrónico */}
                 <div className='mb-3'>
                   <label htmlFor='email' className='form-label'>
                     Correo electrónico
@@ -48,8 +47,6 @@ const LoginPage = () => {
                     placeholder='Ingresa tu correo'
                   />
                 </div>
-
-                {/* Campo: Contraseña */}
                 <div className='mb-3'>
                   <label htmlFor='password' className='form-label'>
                     Contraseña
@@ -63,8 +60,6 @@ const LoginPage = () => {
                     placeholder='Ingresa tu contraseña'
                   />
                 </div>
-
-                {/* Botón de Iniciar Sesión */}
                 <div className='d-grid'>
                   <button type='submit' className='btn btn-success w-50 mx-auto'>
                     Iniciar Sesión
