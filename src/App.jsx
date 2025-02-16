@@ -1,3 +1,4 @@
+import Cart from './assets/components/Cart'
 import Footer from './assets/components/Footer'
 import Home from './assets/components/Home'
 import LoginPage from './assets/components/LoginPage'
@@ -10,7 +11,8 @@ const App = () => {
       <Navbar />
       {/* <Home /> */}
       {/* <RegisterPage /> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <Cart />
       <Footer />
     </>
   )
